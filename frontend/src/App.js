@@ -1,10 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import Components from './components';
+import Dashboard from './components/Dashboard'; // Assuming you have a Home component
+import Register from './components/register';
+import Login from './components/login';
+
 
 function App() {
   return (
- <Components />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 

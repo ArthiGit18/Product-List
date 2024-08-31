@@ -38,5 +38,12 @@
 .form_list{
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  margin: auto;
+  height: 100%;
+}
+
+.button_style{
+  background-color: black !important;
 }
