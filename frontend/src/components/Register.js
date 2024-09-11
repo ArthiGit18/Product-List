@@ -50,8 +50,8 @@ class Register extends React.Component {
               type="text"
               autoComplete="off"
               name="username"
-              // value={this.state.username}
-              // onChange={this.onChange}
+              value={this.state.username}
+              onChange={this.onChange}
               placeholder="User Name"
               required
             />
@@ -61,8 +61,8 @@ class Register extends React.Component {
               type="password"
               autoComplete="off"
               name="password"
-              // value={this.state.password}
-              // onChange={this.onChange}
+              value={this.state.password}
+              onChange={this.onChange}
               placeholder="Password"
               required
             />
@@ -72,8 +72,8 @@ class Register extends React.Component {
               type="password"
               autoComplete="off"
               name="confirm_password"
-              // value={this.state.confirm_password}
-              // onChange={this.onChange}
+              value={this.state.confirm_password}
+              onChange={this.onChange}
               placeholder="Confirm Password"
               required
             />
@@ -83,8 +83,8 @@ class Register extends React.Component {
               variant="contained"
               color="primary"
               size="small"
-              // disabled={this.state.username == '' && this.state.password == ''}
-              // onClick={this.register}
+              disabled={this.state.username == '' && this.state.password == ''}
+              onClick={this.register}
             >
               Sign Up
             </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

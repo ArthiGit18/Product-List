@@ -2,7 +2,8 @@ import React from 'react'
 import {Button, TextField, Link} from '@mui/material'
 import { withRouter } from "./utils";
 import swal from "sweetalert";
-const axios = require("axios");
+// const axios = require("axios");
+import axios from 'axios';
 const bcrypt = require("bcryptjs");
 var salt = bcrypt.genSaltSync(10);
 
@@ -50,9 +51,9 @@ class Login extends React.Component {
                             id="standard-basic"
                             type="text"
                             autoComplete="off"
-                            // name="username"
-                            // value={this.state.username}
-                            // onChange={this.onChange}
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.onChange}
                             placeholder="User Name"
                             required
                         />
@@ -62,9 +63,9 @@ class Login extends React.Component {
                             type="password"
                             autoComplete="off"
                             name="password"
-                            // value={this.state.password}
-                            // onChange={this.onChange}
-                            // placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                            placeholder="Password"
                             required
                         />
                         <br /><br />
@@ -73,8 +74,8 @@ class Login extends React.Component {
                             variant="contained"
                             // color="primary"
                             size="small"
-                        // disabled={this.state.username == '' && this.state.password == ''}
-                        // onClick={this.login}
+                        disabled={this.state.username == '' && this.state.password == ''}
+                        onClick={this.login}
                         >
                             Login
                         </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

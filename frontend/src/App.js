@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import Dashboard from './components/Dashboard'; // Assuming you have a Home component
+import Dashboard from './components/dashboard'; // Assuming you have a Home component
 import Register from './components/register';
 import Login from './components/login';
 
