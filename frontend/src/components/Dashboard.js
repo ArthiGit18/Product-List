@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Pagination,Button, TextField, Dialog, DialogActions, LinearProgress,
+import {
+  Pagination, Button, TextField, Dialog, DialogActions, LinearProgress,
   DialogTitle, DialogContent, TableBody, Table,
-  TableContainer, TableHead, TableRow, TableCell } from '@mui/material';
+  TableContainer, TableHead, TableRow, TableCell
+} from '@mui/material';
 import swal from 'sweetalert';
 import { withRouter } from './utils';
 import axios from 'axios';
@@ -42,7 +44,7 @@ class Dashboard extends Component {
   }
 
   getProduct = () => {
-    
+
     this.setState({ loading: true });
 
     let data = '?';
@@ -62,7 +64,7 @@ class Dashboard extends Component {
         icon: "error",
         type: "error"
       });
-      this.setState({ loading: false, products: [], pages: 0 },()=>{});
+      this.setState({ loading: false, products: [], pages: 0 }, () => { });
     });
   }
 
@@ -229,25 +231,27 @@ class Dashboard extends Component {
     return (
       <div>
         {this.state.loading && <LinearProgress size={40} />}
-        <div>
+        <div className='dashboard_heading'>
           <h2>Dashboard</h2>
-          <Button
-            className="button_style"
-            variant="contained"
-            color="primary"
-            size="small"
-            onClick={this.handleProductOpen}
-          >
-            Add Product
-          </Button>
-          <Button
-            className="button_style"
-            variant="contained"
-            size="small"
-            onClick={this.logOut}
-          >
-            Log Out
-          </Button>
+          <div className='dashboard_actions'>
+            <Button
+              className="button_style"
+              variant="contained"
+              color="primary"
+              size="small"
+              onClick={this.handleProductOpen}
+            >
+              Add Product
+            </Button>
+            <Button
+              className="button_style"
+              variant="contained"
+              size="small"
+              onClick={this.logOut}
+            >
+              Log Out
+            </Button>
+          </div>
         </div>
 
         {/* Edit Product */}
@@ -303,7 +307,7 @@ class Dashboard extends Component {
               variant="contained"
               component="label"
             > Upload
-            <input
+              <input
                 type="file"
                 accept="image/*"
                 name="file"
@@ -382,7 +386,7 @@ class Dashboard extends Component {
               variant="contained"
               component="label"
             > Upload
-            <input
+              <input
                 type="file"
                 accept="image/*"
                 name="file"
@@ -452,7 +456,7 @@ class Dashboard extends Component {
                       onClick={(e) => this.handleProductEditOpen(row)}
                     >
                       Edit
-                  </Button>
+                    </Button>
                     <Button
                       className="button_style"
                       variant="outlined"
@@ -461,7 +465,7 @@ class Dashboard extends Component {
                       onClick={(e) => this.deleteProduct(row._id)}
                     >
                       Delete
-                  </Button>
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}

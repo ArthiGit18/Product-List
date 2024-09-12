@@ -47,3 +47,29 @@
 .button_style{
   background-color: black !important;
 }
+
+.dashboard_heading{
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  align-items: center;
+}
+
+.dashboard_heading h2{
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.dashboard_actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+/* .dashboard_actions Button:hover{
+  color: greenyellow;
+} */
+
+.button_style:hover{
+  background-color: rgb(127, 190, 33) !important;
+}
